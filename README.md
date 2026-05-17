@@ -7,6 +7,34 @@
 
 ---
 
+## Converting a Markdown CV to PDF
+
+The `resume.css` in this repo is the stylesheet. It uses `@page` rules and a `.markdown-body` wrapper — it's designed for [`md-to-pdf`](https://github.com/simonhaenisch/md-to-pdf).
+
+**One-time setup:**
+```bash
+npm install -g md-to-pdf
+```
+
+**Convert any CV markdown to PDF:**
+```bash
+md-to-pdf --stylesheet resume.css "David Chen - Quant Researcher CV.md"
+# outputs: David Chen - Quant Researcher CV.pdf
+```
+
+**Typical workflow:**
+1. LLM generates a tailored CV as a `.md` file (e.g. `David Chen - Quant Role CV.md`)
+2. Run the `md-to-pdf` command above
+3. PDF is output in the same directory
+
+**Notes:**
+- `md-to-pdf` renders via headless Chrome (Puppeteer) — the output matches browser print quality
+- The CSS hides `<hr>` dividers, centers the name/contact header, and applies tight print margins
+- Font size is 9.5pt by default — adjust `font-size` in `resume.css` if you need more/less content per page
+- If `md-to-pdf` isn't available, fallback: open the markdown in a browser renderer that wraps content in `.markdown-body`, load `resume.css`, and print to PDF
+
+---
+
 ## How to Keep This Repo Updated
 
 The source of truth is the **local master file** at `job_related/David Chen - Ultra CV Master.md` (not committed here — contains PII).
