@@ -7,6 +7,30 @@
 
 ---
 
+## How to Keep This Repo Updated
+
+The source of truth is the **local master file** at `job_related/David Chen - Ultra CV Master.md` (not committed here — contains PII).
+
+When you complete a new project, role, or research area:
+
+1. **Update the local master first** — open a Claude Code session and describe what you built. Claude reads your code/folders and adds the relevant bullets, skills, and project entry to the master `.md`.
+2. **Then mirror the changes here** — update the corresponding file(s) in this repo:
+   - New project → create `projects/<project-name>.md`
+   - New skills → append to `skills.md`
+   - New role or outcomes → update `experience.md`
+   - New domain capability → update the Domain Capabilities section in `README.md`
+3. **Commit and push:**
+   ```bash
+   cd job_related/devmaster-cv
+   git add .
+   git commit -m "feat: add <project or skill name>"
+   git push
+   ```
+
+**Rule of thumb:** if it went into the local master, it belongs here too (minus PII).
+
+---
+
 ## How to Use This Repo (for LLM-assisted CV generation)
 
 This repo is a structured master CV datasource. To generate a tailored CV from a job description:
