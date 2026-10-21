@@ -71,7 +71,7 @@
 - Perpl market maker hedged on Lighter (ranked 7th of 71 accounts above $1M volume on spread capture)
 - Lighter main ↔ rh cross-deployment arbitrage; Within-Omni RWA pair trading; rwa-auto / omni-auto engines
 - Treasury, rebalancer and liquidation-risk systems; Perpl chain indexer; Rust daemons and shadow engine
-- Options and vol tooling: crypto_options_agg (dcoption.xyz), HAR-RV advisory, Hyperliquid tick backtesting, lighter_hedge
+- Options and vol tooling: crypto_options_agg, HAR-RV advisory, Hyperliquid tick backtesting, lighter_hedge
 - A ~15-study research library that drove the trading decisions
 
 ## Independent AI / Developer-Tools Builder | 2026 – Present

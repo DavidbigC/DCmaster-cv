@@ -3,7 +3,7 @@
 **My role [Mine]:** my strategy questions (how to hedge a short strangle, when a breakout is fake, which strikes and DTEs to sell) and the decisions taken from the results; the backtests, optimisation and ML were run by AI agents (Apr 2026) [Directed].
 
 **Type:** Quantitative options and volatility research project
-**Stack:** Python, Numba, Optuna, DuckDB, PyArrow / Parquet, pandas, NumPy, Streamlit, Matplotlib, Binance Futures API, Hyperliquid tick archive, dcoption.xyz API
+**Stack:** Python, Numba, Optuna, DuckDB, PyArrow / Parquet, pandas, NumPy, Streamlit, Matplotlib, Binance Futures API, Hyperliquid tick archive, crypto_options_agg API
 
 ---
 
@@ -14,7 +14,7 @@
 - Systematic comparison of hedge policies: fake-breakout confirmation vs. preemptive vs. standard immediate — fake mode achieves ~3.66 Sharpe vs. 0.16 for immediate mode
 - Regime detection: efficiency ratio, chop score, path length, trend strength used to classify market windows and switch strategy parameters dynamically
 - Microstructure feature engineering from Hyperliquid tick data: signed relative trade flow, open pressure, block concentration z-scores (TWAP share, block share over 24h windows)
-- Options APR surface analysis: live bid prices across strikes and DTEs from dcoption.xyz; asymmetric strike selection research
+- Options APR surface analysis: live bid prices across strikes and DTEs from crypto_options_agg; asymmetric strike selection research
 - Volatility forecasting research: HAR-RV model family (HAR-RV, HAR-RV-J with bipower variation, HARQ with realized quarticity, HAR-IV with DVol); VRP dynamics and IV–RV spread as primary options edge signal
 - Markov-switching HAR and regime-switching vol models; DVol term structure shape, skew steepness, and funding rate divergence as regime transition features
 - Tail risk research for short-strangle books: quantile regression for breach probability, realized semivariance (upside/downside decomposition), conditional density forecasting

@@ -1,10 +1,9 @@
 # crypto_options_agg
 
-**My role [Mine]:** my idea for a multi-venue options workspace for my own options selling; I chose the venues, views and scanners and published it at dcoption.xyz. AI agents wrote the code and ran the Node → Rust migration (Mar 2026) [Directed].
+**My role [Mine]:** my idea for a multi-venue options workspace for my own options selling; I chose the venues, views and scanners and published it as a public self-hosted site (repo is private). AI agents wrote the code and ran the Node → Rust migration (Mar 2026) [Directed].
 
 **Type:** Crypto options analytics platform
 **Stack:** Node.js, Express, Next.js, TypeScript, JavaScript, Rust, Axum, React, PostgreSQL, SQLite, WebSockets, SSE, REST APIs, Playwright, Docker Compose, Caddy, Prometheus, Loki, Grafana, Wagmi
-**Live site:** dcoption.xyz
 
 ---
 
@@ -32,7 +31,7 @@
 - PostgreSQL-backed hub service with migrations and encrypted credential storage
 - Playwright-based end-to-end testing plus repo-based QA workflows
 - Docker Compose / Podman-based local and production orchestration
-- Caddy reverse proxy for HTTPS public serving on dcoption.xyz
+- Caddy reverse proxy for HTTPS public serving
 - Prometheus, Loki, Promtail, and Grafana for metrics, logs, and operational visibility
 
 ## Additions (2026-10 audit)

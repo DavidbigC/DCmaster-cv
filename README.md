@@ -5,7 +5,7 @@
 **X:** [@davidbigcccc](https://x.com/davidbigcccc)
 **Dune:** [dune.com/davidbigc](https://dune.com/davidbigc) · [dune.com/dragonborn](https://dune.com/dragonborn)
 **Flipside:** [flipsidecrypto.xyz/DavidC/dashboards](https://flipsidecrypto.xyz/DavidC/dashboards)
-**Live AI product:** [tradfiagentcn.xyz](https://tradfiagentcn.xyz) · **Public options dashboard:** dcoption.xyz
+**AI product repo:** [github.com/DavidbigC/mytradfiagent](https://github.com/DavidbigC/mytradfiagent)
 
 *Last full audit: 2026-10-21 — every GitHub repo, authored PRs, local projects and the private trading workspace.*
 
@@ -197,7 +197,7 @@ This repo is a structured master CV datasource. To generate a tailored CV from a
 | [har-dashboard.md](projects/har-dashboard.md) | HAR-RV Live Volatility Advisory | 2026 directed | Vol forecasting |
 | [vol-research.md](projects/vol-research.md) | Hyperliquid Vol & Options Research | 2026 directed | Backtesting + ML |
 | [lighter-hedge.md](projects/lighter-hedge.md) | lighter_hedge | 2026 directed | Rust strangle hedger |
-| [crypto-options-agg.md](projects/crypto-options-agg.md) | crypto_options_agg | 2026 directed | Options analytics (dcoption.xyz) |
+| [crypto-options-agg.md](projects/crypto-options-agg.md) | crypto_options_agg | 2026 directed | Options analytics |
 | [mytradfiagent.md](projects/mytradfiagent.md) | mytradfiagent | 2026 directed | Live AI research agent |
 | [polymarket.md](projects/polymarket.md) | Polymarket 5-Min Monitor | 2026 directed | Prediction-market research |
 | [ai-tools.md](projects/ai-tools.md) | llm-wiki, ai keyboard, DCs-Transcriber, dev tooling | 2026 directed | Personal AI tools |
