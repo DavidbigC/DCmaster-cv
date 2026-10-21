@@ -1,5 +1,7 @@
 # FLOKI BSC Transaction Warehouse
 
+**My role [Mine]:** built hands-on (Feb 2025) — design, code and schema are mine.
+
 **Type:** BNB Chain transaction warehouse and enrichment pipeline
 **Stack:** Python, PostgreSQL, SQLAlchemy, pandas, asyncio, aiohttp, Web3.py, Flipside, Dune, Alchemy
 

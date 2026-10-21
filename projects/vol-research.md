@@ -1,5 +1,7 @@
 # Hyperliquid Vol & Options Strategy Research
 
+**My role [Mine]:** my strategy questions (how to hedge a short strangle, when a breakout is fake, which strikes and DTEs to sell) and the decisions taken from the results; the backtests, optimisation and ML were run by AI agents (Apr 2026) [Directed].
+
 **Type:** Quantitative options and volatility research project
 **Stack:** Python, Numba, Optuna, DuckDB, PyArrow / Parquet, pandas, NumPy, Streamlit, Matplotlib, Binance Futures API, Hyperliquid tick archive, dcoption.xyz API
 

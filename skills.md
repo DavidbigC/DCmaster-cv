@@ -1,5 +1,35 @@
 # Skills Inventory
 
+> Apply the claim levels in `README.md` → "How the Work Was Done". Sections marked [Mine] are personal skills. Everything else is technology used in my projects: tools from 2021–2025 work were hands-on; items that appear only in 2026 projects were implemented by AI agents under my direction [Directed] and are not personal expertise.
+
+## What I Personally Bring [Mine]
+
+- Trading strategy and market judgment: cross-venue arbitrage, market making, funding carry and basis trades, options selling and hedging ideas, RWA (commodities, indices) perps, prediction markets — choosing what to trade, where, and when to stop
+- Risk ownership: setting position and capital limits, deciding when to arm, derisk, pause or pivot, learning from real losses
+- Live operations: running strategies with real capital across several venues, funding and moving capital, monitoring, noticing when numbers look wrong
+- Directing AI coding agents (Claude Code, OpenAI Codex): turning an idea into a brief with constraints, steering brainstorm → spec → plan → build, reviewing results, setting standing operating rules, judging output against live evidence
+- Product thinking: deciding what a console or tool must show, what ships and what stays inert
+- Reading and questioning analysis: asking the next question, rejecting results that conflict with live evidence, turning findings into decisions
+- Crypto / DeFi domain breadth: perp DEXs, lending, LPs and CLAMMs, yield tokens, airdrops and points programs, bridges and protocol trust models
+- Product and growth analytics: KPI and dashboard design, user behaviour analysis, campaign and incentive design, competitor and on-chain research, stakeholder reporting
+- Research training: experimental design and statistical inference (MSc)
+
+## Hands-On Technical Skills (2021–2025 work) [Mine]
+
+- Python for data and automation: pandas, NumPy, Jupyter + ipywidgets, Plotly, Matplotlib, requests / aiohttp / asyncio, SQLAlchemy, Web3.py, Telegram bots
+- SQL: Dune (DuneSQL) and dbt-style Spellbook models, Flipside, Allium, PostgreSQL, MySQL, SQLite
+- Blockchain data and interaction: JSON-RPC on Sui, BNB Chain, Avalanche, Berachain and Arbitrum; receipt and transfer-log decoding; token metadata enrichment; Uniswap V3 sqrtPriceX96 pricing; Dolomite and Odos integrations; Alchemy, BscScan, Dune Python client, DappRadar API
+- Warehousing: PostgreSQL schemas, incremental loads, deduplication and upserts, async batch ingestion with retries
+- TypeScript / Node.js: Sui SDK (@mysten/sui), AlphaLend SDK, a Silo vault bot with multi-RPC failover, node-cron, PM2; Next.js + Reown frontend (Limito)
+- Go: Lighter order scripts, a TCP hedge server for the Lighter ↔ Bluefin arb, order-book monitors, Paradex WebSocket client
+- Solidity with Foundry: Uniswap hook for limit orders (Limito), Dune Sim IDX listener
+- Indexing: Envio HyperIndex indexers
+- Web apps: Flask + Flask-Login + Gunicorn on Render with Neon Postgres; Flask reporting dashboards
+- BI and reporting: Tableau, Streamlit, R / R Markdown with ggplot
+- Quantitative DeFi analysis: delta-neutral money-market + perp sizing, LP ratio maths, yield / APY modelling, funding-rate comparison across venues
+
+---
+
 ## Languages
 
 - Python
@@ -10,6 +40,7 @@
 - R
 - Go
 - Solidity
+- Swift (AppKit) — 2026, directed
 
 ## Spoken Languages
 
@@ -48,6 +79,10 @@
 - Python–Rust sidecar process architecture
 - hot-reload config systems
 - self-healing WebSocket feed infrastructure
+- asyncio / FastAPI services, httpx, websockets
+- curl_cffi browser-impersonation clients, per-credential session pooling
+- HMAC- and Ed25519-signed exchange APIs, JWT cookie auth with token renewal
+- Tokio (Rust async), ratatui TUIs; Textual (Python TUI)
 
 ## Frontend / UI
 
@@ -61,6 +96,8 @@
 - Tailwind CSS
 - chart-based interfaces
 - TradingView Lightweight Charts
+- uPlot (high-frequency live charts), React 19, mobile-first operator dashboards
+- PyQt6 and AppKit desktop UIs
 
 ## Databases / Storage
 
@@ -74,6 +111,8 @@
 - local analytical storage
 - event-level storage
 - transaction-level storage
+- DuckDB over day-partitioned Parquet lakes
+- SQLite at scale (18 GB ingest journal, WAL, covering indexes, VACUUM INTO backups)
 
 ## Data / Analytics / ETL
 
@@ -83,7 +122,9 @@
 - PyArrow / Parquet
 - Optuna (Bayesian optimization, TPE and NSGA-II samplers)
 - Numba (JIT-compiled numerical simulation)
-- dbt exposure through Dune Spellbook contributions
+- dbt exposure through Dune Spellbook model PRs (not merged)
+- Envio HyperSync bulk chain-log backfills
+- block bootstrap, walk-forward and out-of-sample validation
 - Kafka
 - forecasting
 - trend analysis
@@ -112,6 +153,9 @@
 - OpenAI-compatible API integration
 - hypothesis-driven AI workflows
 - AI-assisted research tooling
+- multi-model debate (MiniMax, Qwen, judge), Grok, Groq, OpenRouter
+- ElevenLabs realtime STT, Whisper STT; Ollama, MLX LoRA fine-tuning
+- Claude Code and OpenAI Codex agentic workflows (specs, plans, subagent TDD, memory, skills) [Mine — this is how I work]
 
 ## Blockchain / On-Chain Data
 
@@ -131,15 +175,18 @@
 - protocol monitoring
 - GMX
 - Hyperliquid (SDK, order placement, EIP-712 signing, perpetuals API)
-- Lighter Protocol (zkSync L2 — Schnorr signing, ECgFp5 curve, Poseidon2 hash, market API)
+- Lighter (main and rh deployments, sub-accounts, positionFunding / fundings APIs, CCTP deposits, fast withdrawals)
 - trade.xyz / Hyperliquid HIP-3 (RWA perpetuals)
 - Derive
 - Paradex
 - Polymarket (Gamma REST API, CLOB WebSocket)
 - EIP-712 structured data signing
-- Schnorr signature implementation (custom ZK-friendly curve)
-- ZK-friendly hash functions (Poseidon2, Goldilocks field)
-- ECgFp5 elliptic curve arithmetic
+- Schnorr signing over ECgFp5 / Poseidon2 for Lighter — crypto modules vendored from the open-source lighter-rust crate and integrated into my own Rust daemons (2026, directed); the curve arithmetic is not my work
+- Omni / Variational (RFQ execution, settlement pools, relayer deposits, risk-limit and swap-financing APIs)
+- Perpl on Monad (Ed25519 API auth, contract events, Multicall3 book snapshots, eth_subscribe / eth_getLogs)
+- Ondo Perps, RISEx, PopDEX (Morph Tachyon), Kyan, Rysk
+- Bluefin (Sui perps), AlphaLend, EdgeX, Paradex, Drift — 2025, hands-on
+- Berachain, Dolomite, Odos, Silo (Arbitrum) — 2024–2025, hands-on
 
 ## Infrastructure / Reliability / Observability
 
@@ -178,6 +225,11 @@
 - root cause tracing across logs, databases, and code
 - runbook-oriented operational thinking
 - SLI / SLO / SLA exposure
+- systemd drop-ins and timers, nginx TLS + basic auth for several apps on one box
+- git-push deploys to bare repos, deploy backups of server-owned state
+- py-spy / perf profiling of live processes; Lightsail burst-credit capacity planning
+- Docker + Helm chart + semantic-release CI (company dashboards)
+- Telegram bots for signals, liquidation alarms and regime alerts
 
 ## Quant / Trading / Market
 
@@ -232,6 +284,13 @@
 - exponential-weighted statistical signal computation (EW mean, Winsor clipping, halflife)
 - Pearson correlation for regime scoring
 - live capital deployment and operational trading system management
+- funding-carry screening (edge × sign persistence ÷ cost), pair kill lists, clock gating
+- Avellaneda–Stoikov-style quoting, exponentially-weighted percentile bands, percentile tier ladders
+- spread vs direction P&L decomposition, markouts, slip attribution with edge-matched controls
+- regime detection (displacement vs imbalance vs CUSUM comparison), lead-lag estimation
+- funding clamps, funding regime following, basis + carry blending
+- liquidation-distance guards and chunked de-risking
+- RWA perp vs swap relative value; cross-deployment arbitrage
 
 ## Visualization / Reporting
 
@@ -242,6 +301,7 @@
 - Recharts
 - Jupyter notebooks
 - interactive HTML charts
+- uPlot, R Markdown / ggplot, Matplotlib
 
 ## Testing / QA
 
@@ -249,6 +309,7 @@
 - end-to-end testing
 - integration testing
 - manual QA
+- large pytest suites, mutation testing, fuzzing, golden-vector parity tests (2026, AI-built)
 
 ---
 
@@ -271,6 +332,8 @@ Typical work done:
 ---
 
 ## Repo-Evidenced Technical Patterns
+
+> **[AI detail]** for 2026 projects: patterns found in the code the agents built under my direction. Use them to describe what systems do, never as personal skills. 2021–2025 patterns (warehouses, decoding, notebooks, Dune workflows) are hands-on.
 
 - PostgreSQL schema design for blockchain transaction warehouses
 - SQLite-backed local analytics and execution tools (WAL mode, WITHOUT ROWID + clustered PKs for time-series)
@@ -295,7 +358,7 @@ Typical work done:
 - tracing-based JSON application logging
 - backend-as-source-of-truth calculation architecture
 - Python–Rust Unix domain socket IPC (newline-delimited JSON protocol, sub-50µs latency)
-- Rust Schnorr signing daemon with ECgFp5 + Poseidon2 ZK crypto primitives
+- Rust Schnorr signing daemon using vendored ECgFp5 + Poseidon2 primitives
 - Rust EIP-712 signing daemon with alloy-signer secp256k1 ECDSA and local atomic nonce management
 - local nonce cache architecture for blockchain order placement (eliminates per-order HTTP roundtrip)
 - gevent cooperative multitasking for concurrent WebSocket + HTTP serving in single-process Flask
@@ -328,3 +391,10 @@ Typical work done:
 - Markov-switching HAR and regime-switching vol models with DVol term structure signals
 
 *Forked repos should not be treated as primary evidence unless actual authored work is verified.*
+- event-sourced chain indexing (events over calldata), dual-tier proposed / safe chain data
+- SQLite ingest journal + Parquet / DuckDB analysis lake, chosen by benchmark
+- "ship inert": features deploy disarmed and recording; the operator arms them [Mine — a rule I set]
+- pure decision functions that always return a reason, wrapped by thin I/O services
+- merged multi-venue order books with venue tags and cap-aware walks
+- two-read reconciliation before declaring a position flat; no automatic retry on money-moving calls
+- golden-vector parity tests between Python and Rust implementations

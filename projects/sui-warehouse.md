@@ -1,5 +1,7 @@
 # SUI Transaction Data Warehouse
 
+**My role [Mine]:** built hands-on (Jan 2025) — design, code and schema are mine.
+
 **Type:** Blockchain transaction ingestion / warehouse pipeline
 **Stack:** Python, PostgreSQL, SQLAlchemy, Sui JSON-RPC
 

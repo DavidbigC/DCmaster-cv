@@ -3,7 +3,32 @@
 **GitHub:** [github.com/DavidbigC](https://github.com/DavidbigC)
 **Website:** [davidbigc.github.io/Site](https://davidbigc.github.io/Site/)
 **X:** [@davidbigcccc](https://x.com/davidbigcccc)
-**Dune:** [dune.com/davidbigc](https://dune.com/davidbigc)
+**Dune:** [dune.com/davidbigc](https://dune.com/davidbigc) · [dune.com/dragonborn](https://dune.com/dragonborn)
+**Flipside:** [flipsidecrypto.xyz/DavidC/dashboards](https://flipsidecrypto.xyz/DavidC/dashboards)
+**Live AI product:** [tradfiagentcn.xyz](https://tradfiagentcn.xyz) · **Public options dashboard:** dcoption.xyz
+
+*Last full audit: 2026-10-21 — every GitHub repo, authored PRs, local projects and the private trading workspace.*
+
+---
+
+## How the Work Was Done — read this before generating any CV
+
+My work splits into two eras:
+
+- **2021–2025: hands-on.** I wrote the code, SQL and analysis myself: blockchain data warehouses, Dune / Flipside research and dashboards, DeFi bots and calculators, the Limito CLAMM tool, the Lighter ↔ Bluefin arb with a Go hedge server, indexers, and the dashboards in my analyst roles.
+- **2026: AI-directed.** From early 2026 I build by directing AI coding agents (Claude Code and OpenAI Codex). I come up with the ideas, set strategy, requirements and risk limits, approve designs, operate the systems with live capital and judge results; the agents write the code and run most of the measurements I ask for.
+
+**Claim levels used in this repo:**
+
+- **[Mine]** — my own ideas, decisions, domain judgment, operation, or hands-on work (all 2021–2025 work)
+- **[Directed]** — I conceived and directed it; AI agents implemented it (2026 technical systems)
+- **[AI detail]** — implementation internals recorded for reference; not personal expertise
+
+**Phrasing rules:**
+
+- 2021–2025 work: normal verbs ("built", "wrote", "designed").
+- 2026 work: "conceived and directed", "led AI coding agents to build", "specified", "set the strategy / risk limits for", "operated with live capital", "commissioned analysis that showed…". Do not say "implemented / coded / engineered", and do not list 2026 implementation techniques as personal skills.
+- Positioning: a hands-on on-chain / DeFi data builder (2021–2025) who became an AI-native builder and operator in 2026 — owning the strategy, the risk and the live operation.
 
 ---
 
@@ -37,7 +62,7 @@ md-to-pdf --stylesheet resume.css "David Chen - Quant Researcher CV.md"
 
 ## How to Keep This Repo Updated
 
-The source of truth is the **local master file** at `job_related/David Chen - Ultra CV Master.md` (not committed here — contains PII).
+The source of truth is the **local master file** at `job_related/David Chen - Ultra CV Master.md` (not committed here — contains PII and private account figures).
 
 When you complete a new project, role, or research area:
 
@@ -55,7 +80,7 @@ When you complete a new project, role, or research area:
    git push
    ```
 
-**Rule of thumb:** if it went into the local master, it belongs here too (minus PII).
+**Rule of thumb:** if it went into the local master, it belongs here too — minus PII, account identifiers, server details, and dollar capital / P&L figures of private trading accounts (keep bps, ranks and percentages).
 
 ---
 
@@ -63,9 +88,9 @@ When you complete a new project, role, or research area:
 
 This repo is a structured master CV datasource. To generate a tailored CV from a job description:
 
-1. Read this `README.md` for the full capability overview and role index
-2. Read `skills.md` for the complete skills inventory
-3. Read `experience.md` for work history, outcomes, and education
+1. Read **How the Work Was Done** above and apply its claim levels
+2. Read `skills.md` for the skills inventory (personal skills first, then technologies used)
+3. Read `experience.md` for work history, outcomes, open-source PRs and education
 4. Read the project files in `projects/` that are relevant to the role (see Role Index below)
 5. Generate a tailored CV in Markdown, ranked: **critical match → nice to have → bonus**
 6. Render to PDF using `resume.css`
@@ -79,110 +104,115 @@ This repo is a structured master CV datasource. To generate a tailored CV from a
 
 ## Short Summary
 
-- 5+ years working across crypto, AI, data, analytics, trading systems, and product operations
+- 5+ years across crypto, AI, data, analytics, trading systems, and product operations
 - Formal training in experimental design, statistical inference, behavioural modelling, and research methods (MSc)
-- Built and operated production systems in AI research, options analytics, arbitrage, on-chain warehousing, and DeFi automation
-- Worked across product analytics, growth analytics, on-chain research, quantitative tooling, and data infrastructure
-- Built analytics for business monitoring, forecasting, feature prioritisation, campaign evaluation, and operational decision support
-- Managed product delivery for crypto trading features from early viability research through cross-functional implementation
-- Experience spans Python, TypeScript / Node.js, Rust, SQL, PostgreSQL, SQLite, DuckDB, APIs, WebSockets, blockchain data, Linux, AWS, and production observability workflows
+- [Mine] 2021–2025: hands-on on-chain data work — PostgreSQL warehouses for Sui and BNB Chain, Dune / Flipside / Allium research and dashboards, DeFi automation and calculators, a CLAMM limit-order product, cross-venue arb bots
+- [Mine] Product and growth analytics in three crypto companies: FLOKI, Dragon Race (#1 dApp on Manta, 1M+ wallets in an opBNB launch week), CARV
+- [Mine + Directed] Since Jan 2026, conceived, directed and operated a multi-app cross-venue trading platform as a one-person team with AI coding agents: 1,435 commits, four apps, live capital on five venues (trade.xyz, Omni/Variational, Lighter main, Lighter rh, Perpl)
+- [Mine] Run a delta-neutral funding and spread arbitrage desk across Omni, Lighter and trade.xyz; attribution showed ~78% of profit came from funding, which reshaped how I choose and cut pairs
+- [Mine] Set the strategy for and ran a market maker on Perpl (Monad) hedged on Lighter that ranked 7th of 71 accounts above $1M volume on spread capture (+3.50 bps), per an on-chain study I commissioned
+- [Mine + Directed] Commissioned a ~15-study research library (RWA arbitrage universe, funding mechanisms, oracle risk, 135-symbol funding-harvest screen, oil rolls and backwardation, funding prediction) and traded from it
+- [Mine] Run AI agents like an engineering team: brief → spec → plan → build with tests → review → operate; standing operating rules for the agents (ship features inert, never touch live parameters, live data is authoritative)
 
 ---
 
 ## Domain Capabilities
 
-### AI / LLM Systems
-- Built production AI-powered financial research agent
-- Multi-turn agent workflows with planning, tool use, and structured output generation
-- Hypothesis-driven debate flows for investment research
-- OpenAI-compatible model integration; prompt design, tool schema, context handling
-- User-facing AI product with auth, chat history, admin controls, deployment
-
-### Data Infrastructure / Analytics Engineering
-- PostgreSQL-backed ingestion and warehousing for blockchain transaction data
-- Schema design for transaction facts, token metadata, event capture, balances, positions, trade logs
-- Incremental update flows, backfill ingestion, deduplication, upsert logic, retry mechanisms
-- Async and batch processing patterns for API-driven ingestion
-
-### Product Analytics / Growth Analytics
-- Dashboards for product KPIs, DAU/MAU, campaign performance, protocol interactions
-- User behaviour analysis for feature prioritisation, retention, growth, incentive design
-- Forecasting and trend analysis for key business metrics
-- Competitor intelligence and market insight for product decisions
-
-### On-Chain Research / Crypto Analytics
-- Dune, Allium, and Flipside for on-chain data analysis
-- Contributed to Dune Spellbook dbt models (Solana Meteora edge case correction)
-- Transaction decoding and warehousing for Sui and BNB Chain datasets
+### On-Chain Research / Crypto Analytics — hands-on [Mine]
+- Dune, Allium and Flipside analysis; Dune dashboards (Floki trading bot, Contango, SOFA, CARV node sale)
+- Transaction decoding and warehousing for Sui and BNB Chain
 - Whale behaviour, TVL, wallet flows, launchpad activity monitoring
+- Submitted Dune Spellbook dbt model PRs (Floki bot trades on Solana / Base / Ethereum, Meteora fix) — not merged
 
-### Quant / Trading / Market Systems
-- Autonomous bilateral market-making (XEMM) across trade.xyz and Lighter with live capital
-- Multi-level risk supervision: global notional caps, per-symbol inventory, bilateral net-inventory, kill-switches
-- HAR-RV vol forecasting system: deployed, 733 days BTC/ETH, regime-conditional VRP signals
-- Short-strangle strategy research: 15,000+ parameter sweeps, Bayesian Pareto optimization, delta-hedging via perps
-- ZK protocol integration: Lighter (ECgFp5/Poseidon2/Schnorr), trade.xyz (EIP-712)
-- Options analytics: Greeks, IV surface, SVI fitting, arb detection, scanner tooling
-- Regime detection: HAR structural breaks, efficiency ratio, chop score, HMM research
+### Product Analytics / Growth Analytics — hands-on [Mine]
+- KPI dashboards (Tableau, Streamlit), DAU/MAU, campaign performance, protocol interactions
+- User behaviour analysis for feature prioritisation, retention, growth, incentive design
+- Forecasting, competitor intelligence, protocol scouting
 
-### Product / Builder Work
-- Shipped full-stack products independently from concept to production
-- Backend, frontend, database design, deployment, and analytics across multiple live systems
-- Feature viability research, product scoping, implementation coordination
+### Trading Strategy & Operation [Mine]
+- Funding-rate and spread arbitrage across crypto perps, RWAs and tokenised equities
+- Market making on a perp DEX with cross-venue hedging; cross-deployment arbitrage
+- Options selling with perp delta hedging; volatility-based advisory
+- Risk ownership: limits, arming / derisking decisions, incident follow-through, strategy pivots
+
+### Trading Systems — AI-built under my direction [Directed]
+- Funding/spread desk executor and scanners; rwa-auto / omni-auto autonomous engines
+- Perpl market maker with percentile tier ladders and cross-venue hedging
+- Lighter main ↔ rh arbitrage console with per-coin liquidation guards
+- Within-Omni RWA future-vs-swap pair trading; treasury and rebalancer; liquidation-risk stack
+- Perpl chain indexer (316.9M actions), real-time L3 order book, Parquet + DuckDB research lake
+- Rust signing daemons and a Rust shadow engine (709 µs p50 signal → signed order)
+
+### AI / LLM Systems — AI-built under my direction [Directed]
+- mytradfiagent: live AI financial research agent (33+ tools, multi-model debate, A-share data)
+- llm-wiki (LLM-maintained knowledge base), ai keyboard (local autocomplete with LoRA fine-tuning), DCs-Transcriber (macOS voice input)
 
 ---
 
 ## Role Index
 
-### Quant / Trading Role → read these files
-- `projects/variational-perps.md` — XEMM, risk supervision, ZK signing, live capital (strongest signal)
-- `projects/har-dashboard.md` — HAR-RV forecasting, VRP signals, regime detection
-- `projects/vol-research.md` — short-strangle backtesting, Bayesian optimization, ML strategy search
-- `projects/crypto-options-agg.md` — options analytics platform
-- `skills.md` → Quant / Trading / Market section
+### Trading / Quant / Market Making → read these files
+- `projects/funding-desk.md` — funding & spread arbitrage desk (core trading business)
+- `projects/perpl-mm.md` — Perpl market maker
+- `projects/lighter-arb.md` — Lighter main ↔ rh arbitrage
+- `projects/research-library.md` — research behind the trading decisions
+- `projects/within-omni.md`, `projects/variational-perps.md` — RWA engines
+- `projects/har-dashboard.md`, `projects/vol-research.md`, `projects/lighter-hedge.md`, `projects/crypto-options-agg.md` — options and volatility
+- `skills.md` → What I Personally Bring; Quant / Trading / Market
 
-### AI Engineer Role → read these files
-- `projects/mytradfiagent.md` — AI research agent, multi-turn loops, tool calling
-- `skills.md` → AI / LLM section
-- `experience.md` → FLOKI, Dragon Race
+### Data Engineering / Blockchain Data → read these files
+- `projects/sui-warehouse.md`, `projects/floki-bsc-warehouse.md` (hands-on)
+- `projects/perpl-indexer.md` (directed)
+- `projects/defi-tools-2024-2025.md` (hands-on)
+- `skills.md` → Hands-On Technical Skills
 
-### Analytics Engineer / Data Engineer Role → read these files
-- `projects/sui-warehouse.md` — blockchain ETL, PostgreSQL schema
-- `projects/floki-bsc-warehouse.md` — BNB Chain pipeline, async ingestion
-- `skills.md` → Data / Analytics / ETL section
-- `experience.md` → FLOKI role
+### Product / Growth Analyst → read these files
+- `experience.md` → FLOKI, Dragon Race, CARV
+- `projects/floki-dashboards.md`
 
-### Product Analyst Role → read these files
-- `experience.md` → FLOKI, Dragon Race, CARV roles
-- `skills.md` → Visualization / Reporting section
+### AI / AI-Native Builder → read these files
+- `projects/mytradfiagent.md`, `projects/ai-tools.md`
+- `projects/variational-platform.md` (how a one-person team runs AI agents at scale)
 
-### On-Chain Research Role → read these files
-- `projects/sui-warehouse.md`
-- `projects/floki-bsc-warehouse.md`
-- `experience.md` → FLOKI role
-- `skills.md` → Blockchain / On-Chain Data section
+### On-Chain Research → read these files
+- `projects/sui-warehouse.md`, `projects/floki-bsc-warehouse.md`, `projects/defi-tools-2024-2025.md`
+- `experience.md` → FLOKI; open-source PRs
 
 ---
 
 ## Projects Overview
 
-| File | Project | Type |
-|------|---------|------|
-| [projects/variational-perps.md](projects/variational-perps.md) | Variational Cross-Venue Perpetuals Platform | Live XEMM market-making system |
-| [projects/har-dashboard.md](projects/har-dashboard.md) | HAR-RV Live Volatility Advisory System | Vol forecasting + advisory dashboard |
-| [projects/vol-research.md](projects/vol-research.md) | Hyperliquid Vol & Options Strategy Research | Backtesting + ML strategy research |
-| [projects/crypto-options-agg.md](projects/crypto-options-agg.md) | crypto_options_agg | Options analytics platform (dcoption.xyz) |
-| [projects/mytradfiagent.md](projects/mytradfiagent.md) | mytradfiagent | AI financial research platform |
-| [projects/sui-warehouse.md](projects/sui-warehouse.md) | SUI Transaction Data Warehouse | Blockchain ETL pipeline |
-| [projects/floki-bsc-warehouse.md](projects/floki-bsc-warehouse.md) | FLOKI BSC Transaction Warehouse | BNB Chain ingestion pipeline |
-| [projects/polymarket.md](projects/polymarket.md) | Polymarket 5-Min Monitor | Prediction market Rust TUI + research |
-| [projects/clamm-pendle-lfj.md](projects/clamm-pendle-lfj.md) | CLAMM / Pendle / LFJ | DeFi tooling (concentrated liquidity, yield) |
+| File | Project | Era | Type |
+|------|---------|-----|------|
+| [variational-platform.md](projects/variational-platform.md) | Variational Trading Platform — 2026 overview | 2026 directed | Multi-app trading platform |
+| [funding-desk.md](projects/funding-desk.md) | Funding & Spread Arbitrage Desk | 2026 mine + directed | Core trading business |
+| [research-library.md](projects/research-library.md) | Cross-Venue Research Library | 2026 mine + directed | ~15 trading studies |
+| [perpl-mm.md](projects/perpl-mm.md) | Perpl Market Maker | 2026 mine + directed | Live market making |
+| [perpl-indexer.md](projects/perpl-indexer.md) | Perpl On-Chain Indexer & L3 Book | 2026 directed | Blockchain data engineering |
+| [lighter-arb.md](projects/lighter-arb.md) | Lighter main ↔ rh Arbitrage | 2026 mine + directed | Live cross-deployment arb |
+| [within-omni.md](projects/within-omni.md) | Within-Omni RWA Pair Trading | 2026 directed | Relative value, RWAs |
+| [treasury-and-risk.md](projects/treasury-and-risk.md) | Treasury, Rebalancer & Liquidation-Risk Stack | 2026 directed | Capital and risk |
+| [rust-shadow-engine.md](projects/rust-shadow-engine.md) | Rust Shadow Engine | 2026 directed | Low-latency port |
+| [variational-perps.md](projects/variational-perps.md) | rwa-auto / rwa-maker (trade.xyz ↔ Lighter) | 2026 directed | Autonomous XEMM |
+| [har-dashboard.md](projects/har-dashboard.md) | HAR-RV Live Volatility Advisory | 2026 directed | Vol forecasting |
+| [vol-research.md](projects/vol-research.md) | Hyperliquid Vol & Options Research | 2026 directed | Backtesting + ML |
+| [lighter-hedge.md](projects/lighter-hedge.md) | lighter_hedge | 2026 directed | Rust strangle hedger |
+| [crypto-options-agg.md](projects/crypto-options-agg.md) | crypto_options_agg | 2026 directed | Options analytics (dcoption.xyz) |
+| [mytradfiagent.md](projects/mytradfiagent.md) | mytradfiagent | 2026 directed | Live AI research agent |
+| [polymarket.md](projects/polymarket.md) | Polymarket 5-Min Monitor | 2026 directed | Prediction-market research |
+| [ai-tools.md](projects/ai-tools.md) | llm-wiki, ai keyboard, DCs-Transcriber, dev tooling | 2026 directed | Personal AI tools |
+| [floki-dashboards.md](projects/floki-dashboards.md) | FLOKI product dashboards | 2025 hands-on | Company BI |
+| [sui-warehouse.md](projects/sui-warehouse.md) | SUI Transaction Data Warehouse | 2025 hands-on | Blockchain ETL |
+| [floki-bsc-warehouse.md](projects/floki-bsc-warehouse.md) | FLOKI BSC Transaction Warehouse | 2025 hands-on | BNB Chain ingestion |
+| [clamm-pendle-lfj.md](projects/clamm-pendle-lfj.md) | Limito / Pendle / LFJ | 2024–2025 hands-on | DeFi tooling |
+| [defi-tools-2024-2025.md](projects/defi-tools-2024-2025.md) | Other 2024–2025 DeFi tools & research | 2024–2025 hands-on | Bots, indexers, analysis |
 
 ---
 
 ## Education
 
 **University of Glasgow** — MSc Research Methods of Psychological Science, 2024
+- Dissertation: the alleviating effect of cognitive load on cybersickness
 - Experimental design, statistical inference, behavioural modelling, research methods
 
 **Denison University** — BSc Psychology & Computer Science, 2021

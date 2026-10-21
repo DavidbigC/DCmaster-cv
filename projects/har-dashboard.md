@@ -1,5 +1,7 @@
 # HAR-RV Live Volatility Advisory System
 
+**My role [Mine]:** I wanted a live volatility advisor for my options selling; the HAR-RV modelling, regime logic and dashboard were researched and implemented by AI agents (Apr–May 2026) [Directed].
+
 **Type:** Live vol forecasting and options trading advisory platform
 **Stack:** Python, FastAPI, APScheduler, DuckDB, TradingView Lightweight Charts (SPA frontend), Deribit API, Hyperliquid API, Binance API
 

@@ -1,5 +1,7 @@
 # crypto_options_agg
 
+**My role [Mine]:** my idea for a multi-venue options workspace for my own options selling; I chose the venues, views and scanners and published it at dcoption.xyz. AI agents wrote the code and ran the Node → Rust migration (Mar 2026) [Directed].
+
 **Type:** Crypto options analytics platform
 **Stack:** Node.js, Express, Next.js, TypeScript, JavaScript, Rust, Axum, React, PostgreSQL, SQLite, WebSockets, SSE, REST APIs, Playwright, Docker Compose, Caddy, Prometheus, Loki, Grafana, Wagmi
 **Live site:** dcoption.xyz
@@ -33,6 +35,13 @@
 - Caddy reverse proxy for HTTPS public serving on dcoption.xyz
 - Prometheus, Loki, Promtail, and Grafana for metrics, logs, and operational visibility
 
+## Additions (2026-10 audit)
+
+- 250 commits, Mar 6 → Apr 1 2026; Rust (Axum) backend ~25k lines, Next.js frontend ~12.8k, hub backend ~3.3k
+- original Node/Express backend migrated to Rust with a parity-verification script
+- more venues: Binance options, Kyan, Lighter trading integration
+- Polymarket analysis service (implied move distribution by expiry); SVI vol-surface fitting; public vs private run modes
+
 ## Tags
 
-derivatives tooling · DEX options familiarity �� quant interface · full-stack analytics app · production deployment · product engineering
+derivatives tooling · DEX options familiarity · quant interface · full-stack analytics app · production deployment · product engineering

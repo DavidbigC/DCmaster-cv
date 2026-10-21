@@ -1,5 +1,9 @@
 # Variational Cross-Venue Perpetuals Platform
 
+**My role [Mine]:** my strategy of quoting RWA perps on trade.xyz and hedging on Lighter; I asked for the simpler operator-driven, Hummingbot-style design (pick a coin, set entry, exit and a timer) over auto-calibration, set sizes and limits, and ran it with live capital. AI agents built the engine, daemons and tests (May 2026) [Directed]; the internals below are [AI detail].
+
+> **Scope note:** this file covers the rwa-auto / rwa-maker engine (trade.xyz ↔ Lighter). The same repository grew into a four-app platform — see `variational-platform.md`. trade.xyz (RWA perps), Omni / Variational (omni.variational.io) and Lighter are three different venues.
+
 **Type:** Production autonomous bilateral market-making and cross-exchange arbitrage system
 **Stack:** Python, Flask, gevent, Socket.IO, Rust, WebSockets, REST APIs, SQLite (WAL mode), Unix domain sockets, Gunicorn, Nginx, AWS Lightsail
 
@@ -53,7 +57,7 @@
 
 ## Rust Signing Daemons
 
-- `lighter-execd`: Schnorr signing over ECgFp5 elliptic curve (GF(p^5), p = 2^64 − 2^32 + 1), Poseidon2 hash (Goldilocks field), windowed scalar multiplication
+- `lighter-execd`: Schnorr signing over ECgFp5 (GF(p^5), p = 2^64 − 2^32 + 1) and Poseidon2 (Goldilocks field); the crypto modules are vendored from the open-source lighter-rust crate, while the daemon, IPC protocol, nonce cache and order building were built for this project
 - `tradexyz-execd`: EIP-712 signing (L1 phantom Agent domain, chainId=1337); action_hash = keccak256(msgpack(action) || nonce), alloy-signer secp256k1 ECDSA
 - Both: local nonce cache (AtomicU64 floor) eliminates 10–70ms HTTP roundtrip per order; jittered exponential backoff reconnect
 - Per-request latency breakdown: nonce_fetch_ms, sign_ms, total_ms reported to Python caller
@@ -90,4 +94,4 @@
 
 ## Tags
 
-autonomous market-making · XEMM · cross-venue delta-neutral execution · RWA perpetuals (trade.xyz / Hyperliquid HIP-3) · zkSync DeFi (Lighter Protocol) · ZK crypto primitives (Schnorr, Poseidon2, ECgFp5) · EIP-712 signing · self-healing WebSocket infra · statistical signal computation · risk management systems · Rust + Python IPC · live capital
+autonomous market-making · XEMM · cross-venue delta-neutral execution · RWA perpetuals (trade.xyz / Hyperliquid HIP-3) · zkSync DeFi (Lighter Protocol) · ZK signing integration (vendored Schnorr / Poseidon2 / ECgFp5) · EIP-712 signing · self-healing WebSocket infra · statistical signal computation · risk management systems · Rust + Python IPC · live capital
