@@ -2,7 +2,7 @@
 
 > Claim levels: all company roles and 2021–2025 independent work are [Mine], hands-on. 2026 independent work is AI-built under my direction — see `README.md` → How the Work Was Done.
 
-## FLOKI | Data Analyst | Dec 2024 – Present
+## FLOKI | Data Analyst | Dec 2024 – Apr 2026
 
 - Dashboard design for product and protocol monitoring
 - Tracking for Trading Bot, Floki ID, and TokenFi Launchpad activity
@@ -13,6 +13,10 @@
 - Helped manage delivery for the trading web terminal from early research through implementation support
 - Coordinated development efforts through sprint-style planning and focused working sessions
 - Aligned stakeholders and contributors around feature direction and execution priorities
+- Also covered business analysis: worked closely with the product manager to gather user feedback and turn it into feature requirements
+- Backend access and a working knowledge of how the product backend is built, used to judge which features users asked for and what the system could support
+- Researched competing wallets and trading apps (retention, hooks and growth mechanics) to inform wallet and trading-product design
+- Traded meme coins myself to understand how the user base trades — user research, not speculation
 - Competitor analysis: identified gaps and translated findings into recommendations for new features, campaigns, and system improvements
 - Market and on-chain intelligence; whale / protocol / token metric monitoring
 - Trading bot analytics support: monitoring, behaviour analysis, and product feedback loops
@@ -54,7 +58,9 @@
 - 100K+ community (Discord) messages per month, up over 300% year on year
 - 200% increase in regional event participation
 
-## Independent Quant / DeFi / Product Builder | 2021 – Present
+## Independent On-Chain Market Maker & Arbitrageur | 2021 – Present
+
+Alongside the roles below until April 2026; full-time since May 2026. All venues are on-chain (Lighter, Omni/Variational, trade.xyz on Hyperliquid, Perpl), and the on-chain data work continues. 2021–2025 work is hands-on; from 2026 the strategy, risk and live operation are mine and the systems were built by AI coding agents under my direction. Never describe me as a "trader".
 
 **2021–2025 (hands-on):**
 
@@ -74,7 +80,7 @@
 - Options and vol tooling: crypto_options_agg, HAR-RV advisory, Hyperliquid tick backtesting, lighter_hedge
 - A ~15-study research library that drove the trading decisions
 
-## Independent AI / Developer-Tools Builder | 2026 – Present
+## AI and Developer Tools (2026 projects, not a job)
 
 - AI-native way of working: I originate and direct, AI agents (Claude Code, Codex) implement
 - mytradfiagent (live AI research product), llm-wiki, ai keyboard, DCs-Transcriber, CodexBar HUD, a published Claude Code QA skill
