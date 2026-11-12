@@ -74,9 +74,11 @@ Alongside the roles below until April 2026; full-time since May 2026. All venues
 **2026 (AI-built under my direction; strategy, risk and operation mine):**
 
 - Funding & spread arbitrage desk across Omni/Variational, Lighter and trade.xyz — the core trading business
-- Perpl market maker hedged on Lighter (ranked 7th of 71 accounts above $1M volume on spread capture)
-- Lighter main ↔ rh cross-deployment arbitrage; Within-Omni RWA pair trading; rwa-auto / omni-auto engines
-- Treasury, rebalancer and liquidation-risk systems; Perpl chain indexer; Rust daemons and shadow engine
+- Set the strategy and operated a live Perpl market maker hedged on Lighter, owning quoting, hedge and inventory risk. Ranked 7th of 71 accounts above $1M volume on Perpl-leg spread capture in a commissioned study.
+- Directed Perpl's on-chain stale-quote cancellation path via direct Monad and FastLane submission, the live Rust signer, and shadow validation for a separate Rust decision process.
+- Commissioned Perpl L3 queue reconstruction and a 42,096-fill study of adverse selection, transaction ordering and cancellation latency.
+- Directed the standalone Lighter main ↔ rh arbitrage service migration with book-driven decisions and isolated account-pair risk. Also directed Within-Omni RWA pair trading and the rwa-auto / omni-auto engines.
+- Treasury, rebalancer and liquidation-risk systems; Rust signing daemons and a read-only market-maker prototype
 - Options and vol tooling: crypto_options_agg, HAR-RV advisory, Hyperliquid tick backtesting, lighter_hedge
 - A ~15-study research library that drove the trading decisions
 
@@ -107,11 +109,21 @@ Added in the 2026-10 audit (2026 systems; strategy and operation mine, implement
 - Perpl maker went from −3.1 bps to +1.71 bps of the Perpl leg within its first day after a quoting-model change
 - taker-open entries: 6.55 net bps per dollar vs 1.76 for maker (3.7×), 52 of 53 positive
 - funding & spread desk: ~78% of explained P&L came from funding over a 42-day attribution window (13,114 trades)
-- Lighter main ↔ rh arb: 25.8% APR since start (to 2026-10-05), ~80% spread / ~20% funding, reconciled to equity within $3
+- Lighter main ↔ rh arb recorded 25.8% APR from inception to 5 October 2026, with ~80% spread income and ~20% funding, reconciled against equity
 - funding regime-following +5–6.5%/yr vs −1.3%/yr static over 161 days, all 24 parameter sets positive out-of-sample
 - indexed 8.65M fills + 316.9M actions with zero rate-limit errors; DuckDB/Parquet made wide scans 30–267× faster
-- Rust shadow engine: 709 µs p50 signal → signed order vs 123 ms previously
+- July Rust market-maker shadow: 709 µs p50 / 928 µs p99 from signal to wire-ready signed hedge over 36 simulated hedges
 - 1,435 commits and ~83k lines of tests in the trading workspace, run by one person directing AI agents
+
+**Perpl and Lighter execution update, November 2026**
+
+- matched 42,096 BTC maker fills to Monad events and identified takers, submission routes and block ordering. A separate 24-hour cohort confirmed higher FastLane auction payments in 99 of 107 FastLane same-block losses
+- validated Monad L3 FIFO reconstruction on 1,399 price-level queues across 60 independent replay windows
+- Perpl's live on-chain cancel path cancelled 8,399 of 8,868 single-order submissions in a 2–4 November sample. The Rust signer went live on 5 November
+- measured a 68 ms paired median improvement from submission to observed proposed block in a bounded dual-ingress trial with 14 comparable cancels
+- measured 2.6 µs p50 / 6.4 µs p99 for the Rust cancellation decision alone across 300 synthetic events. Tested the separate BTC decision process against live feeds in shadow
+- Rust-backed three-venue recording used 3.94 CPU seconds versus 7.76 on the same replay input with identical rows. Rolled the recorder out live
+- validated the standalone Lighter arb port against 755,496 replayed decisions and 18 read API response bodies
 
 Use carefully depending on role / audience:
 

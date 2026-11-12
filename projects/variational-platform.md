@@ -8,7 +8,7 @@
 
 ---
 
-## Scale
+## Scale at the October 2026 audit
 
 - 1,435 commits across 76 branches
 - Python: main Flask app ~45.9k lines, market-maker app ~33.6k, scripts ~25.7k, research ~6k; HTML/JS dashboards ~23.6k lines
@@ -16,14 +16,15 @@
 - Tests: 417 files / ~83k lines; market-maker partition 2,637 tests (~32 s)
 - 137 design specs and implementation plans, 2 ADRs, a domain glossary, 13 research write-ups, 8 code-review reports
 
-## Four apps in one repo
+## Platform and deployment layout
 
 | App | What it does | Stack | Runs |
 |---|---|---|---|
 | main ("variational") | funding/spread desk, rwa-maker / rwa-auto, omni-auto, Within-Omni, liquidation guard, Telegram alerts | Flask, Socket.IO, gevent, SQLite | AWS Lightsail |
-| perpl-mm | Perpl market maker, Lighter main ↔ rh arb, funding panels, PopDEX monitor | FastAPI, asyncio, SQLite, uPlot | dedicated AWS Lightsail |
+| perpl-mm | Perpl market maker, funding panels, on-chain cancel monitoring, PopDEX monitor | FastAPI, asyncio, SQLite, uPlot | dedicated AWS Lightsail |
 | risex-mm | RISEx ↔ Lighter basis collector, funding dashboard, maker execution | FastAPI, httpx, websockets | not deployed |
 | treasury | cross-venue deposits / withdrawals and rebalancer | CLI + Textual TUI, web3 | local only |
+| [Lighter main ↔ rh arb](lighter-arb.md) | event-driven cross-deployment execution, portfolio controls and attribution | FastAPI, asyncio, Rust signer, SQLite | separate repo and service since November |
 
 ## Venues
 
@@ -37,7 +38,8 @@ trade.xyz (HIP-3 RWA perps on Hyperliquid), Omni / Variational (RFQ crypto + com
 - **Jul:** Ondo arb page; Perpl market maker; Rust shadow engine; latency research; chain indexer and L3 book
 - **Aug:** Lighter main ↔ rh arb; dual-venue hedging; competitor study; CPU audits; RISEx
 - **Sep:** Within-Omni pair trading; liquidation guard; funding-regime research; XAU on the arb; backwardation page
-- **Oct:** arb returns ledger and multi-account sets; Perpl pivot from market making to funding holding; PopDEX research and monitor
+- **Oct:** arb returns ledger and multi-account sets; Perpl funding-hold workflow and on-chain stale-quote cancellation; PopDEX research and monitor
+- **Nov:** [Perpl execution research and live Rust cancellation signer](perpl-onchain-execution.md), Rust decision shadow, Rust market-data ingestion, and the Lighter arb service split
 
 ## Operating rules I set for the agents [Mine]
 

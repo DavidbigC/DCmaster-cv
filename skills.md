@@ -183,7 +183,8 @@
 - EIP-712 structured data signing
 - Schnorr signing over ECgFp5 / Poseidon2 for Lighter — crypto modules vendored from the open-source lighter-rust crate and integrated into my own Rust daemons (2026, directed); the curve arithmetic is not my work
 - Omni / Variational (RFQ execution, settlement pools, relayer deposits, risk-limit and swap-financing APIs)
-- Perpl on Monad (Ed25519 API auth, contract events, Multicall3 book snapshots, eth_subscribe / eth_getLogs)
+- Perpl on Monad (Ed25519 API auth, contract event and receipt decoding, block-consistent Multicall3 snapshots, proposed-block streams, historical log backfills, FIFO L3 reconstruction) [Directed]
+- Direct EVM submission and FastLane transaction-ordering auctions, with order-ID reconciliation, receipt-based auction fee attribution and Foundry mainnet fork validation [Directed]
 - Ondo Perps, RISEx, PopDEX (Morph Tachyon), Kyan, Rysk
 - Bluefin (Sui perps), AlphaLend, EdgeX, Paradex, Drift — 2025, hands-on
 - Berachain, Dolomite, Odos, Silo (Arbitrum) — 2024–2025, hands-on
@@ -290,7 +291,9 @@
 - regime detection (displacement vs imbalance vs CUSUM comparison), lead-lag estimation
 - funding clamps, funding regime following, basis + carry blending
 - liquidation-distance guards and chunked de-risking
-- RWA perp vs swap relative value; cross-deployment arbitrage
+- RWA perp vs swap relative value
+- Event-driven cross-deployment arbitrage with book-age telemetry and position-basis recovery [Directed]
+- On-chain maker-fill attribution, same-block fill/cancel ordering, and latency decomposition from reference tick to proposed block [Directed]
 
 ## Visualization / Reporting
 
@@ -372,6 +375,8 @@ Typical work done:
 - post-fill adverse selection measurement (1s/5s/30s horizon drift per fill)
 - proportional funding attribution across open fills with idempotent upsert
 - shadow mode adapter pattern for live production migration (legacy → new data source with disagreement logging)
+- Rust transaction signer with isolated IPC, local nonce ownership, spend caps, receipt reconciliation and bounded multi-ingress trials [Directed]
+- Rust WebSocket ingestion with recorded-frame parity, reconnect recovery, and same-input CPU benchmarking [Directed]
 - real SQLite integration tests with tempfile isolation (not mocked) plus controllable fake clock
 - comprehensive fake object injection via dataclass Deps pattern for fast unit tests
 - Numba JIT-compiled backtest engines for fast parameter sweep simulation

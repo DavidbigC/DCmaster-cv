@@ -1,6 +1,6 @@
-# Cross-Venue Research Library (May → Oct 2026)
+# Cross-Venue Research Library (May → Nov 2026)
 
-**My role [Mine]:** I asked the questions and made the trading decisions from the answers; AI agents pulled the data, ran the analysis and wrote the reports [Directed]. Data came from the platform's own snapshot tables (hundreds of thousands of 1-minute rows) plus venue docs and APIs.
+**My role [Mine]:** I asked the questions and made the trading decisions from the answers; AI agents pulled the data, ran the analysis and wrote the reports [Directed]. Data came from the platform's snapshot tables (hundreds of thousands of 1-minute rows), venue APIs and documentation, and public Monad logs and transaction receipts.
 
 ---
 
@@ -23,7 +23,8 @@
 - **Basis + carry blend:** validated on 32.9 days straddling a carry flip (bootstrap P = 100% in both regimes), then run live
 - **Funding hold strategy (BTC + ETH):** in backtest won 9 of 9 trades over 62.75 days, +3.44 bps/day net; shipped as a read-only dashboard line by my choice
 - **Market-maker studies:** competitor benchmarking from chain data, session profiling, regime detection, Binance → Lighter lead-lag, run-over vs adverse selection (see `perpl-mm.md`)
-- **Arb studies:** slip decomposition, spike adverse selection, regime tradeability (see `lighter-arb.md`)
+- **Perpl transaction ordering:** matched 42,096 BTC maker fills to Monad events, attributed takers and submission routes, and separated same-block ordering from earlier-block fills. Checked auction payments against receipts and decomposed the cancel path by stage ([execution project](perpl-onchain-execution.md)).
+- **Arb studies:** slip decomposition, spike adverse selection, regime tradeability and moving-centre band calibration ([Lighter arb](lighter-arb.md))
 - **Other:** delta-hedged LP simulation, DEX contract review, Omni oil swap structure analysis
 
 ## Tags

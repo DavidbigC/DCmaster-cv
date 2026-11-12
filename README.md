@@ -9,6 +9,8 @@
 
 *Last full audit: 2026-10-21 — every GitHub repo, authored PRs, local projects and the private trading workspace.*
 
+*Perpl, Monad execution and Lighter arb update: 2026-11-12.*
+
 ---
 
 ## How the Work Was Done — read this before generating any CV
@@ -108,9 +110,10 @@ This repo is a structured master CV datasource. To generate a tailored CV from a
 - Formal training in experimental design, statistical inference, behavioural modelling, and research methods (MSc)
 - [Mine] 2021–2025: hands-on on-chain data work — PostgreSQL warehouses for Sui and BNB Chain, Dune / Flipside / Allium research and dashboards, DeFi automation and calculators, a CLAMM limit-order product, cross-venue arb bots
 - [Mine] Product and growth analytics in three crypto companies: FLOKI, Dragon Race (#1 dApp on Manta, 1M+ wallets in an opBNB launch week), CARV
-- [Mine + Directed] Since Jan 2026, conceived, directed and operated a multi-app cross-venue trading platform as a one-person team with AI coding agents: 1,435 commits, four apps, live capital on five venues (trade.xyz, Omni/Variational, Lighter main, Lighter rh, Perpl)
+- [Mine + Directed] Since Jan 2026, conceived, directed and operated a multi-app cross-venue trading platform as a one-person team with AI coding agents. At the October audit it had 1,435 commits and four apps, with live capital on five venues (trade.xyz, Omni/Variational, Lighter main, Lighter rh, Perpl)
 - [Mine] Run a delta-neutral funding and spread arbitrage desk across Omni, Lighter and trade.xyz; attribution showed ~78% of profit came from funding, which reshaped how I choose and cut pairs
 - [Mine] Set the strategy for and ran a market maker on Perpl (Monad) hedged on Lighter that ranked 7th of 71 accounts above $1M volume on spread capture (+3.50 bps), per an on-chain study I commissioned
+- [Mine + Directed] Directed and operated Perpl's on-chain stale-quote cancellation workflow with a live Rust signer. Commissioned a 42,096-fill Monad study of execution timing and FastLane transaction ordering
 - [Mine + Directed] Commissioned a ~15-study research library (RWA arbitrage universe, funding mechanisms, oracle risk, 135-symbol funding-harvest screen, oil rolls and backwardation, funding prediction) and traded from it
 - [Mine] Run AI agents like an engineering team: brief → spec → plan → build with tests → review → operate; standing operating rules for the agents (ship features inert, never touch live parameters, live data is authoritative)
 
@@ -138,10 +141,10 @@ This repo is a structured master CV datasource. To generate a tailored CV from a
 ### Trading Systems — AI-built under my direction [Directed]
 - Funding/spread desk executor and scanners; rwa-auto / omni-auto autonomous engines
 - Perpl market maker with percentile tier ladders and cross-venue hedging
-- Lighter main ↔ rh arbitrage console with per-coin liquidation guards
+- Standalone Lighter main ↔ rh arbitrage service with book-driven decisions and per-coin liquidation guards
 - Within-Omni RWA future-vs-swap pair trading; treasury and rebalancer; liquidation-risk stack
 - Perpl chain indexer (316.9M actions), real-time L3 order book, Parquet + DuckDB research lake
-- Rust signing daemons and a Rust shadow engine (709 µs p50 signal → signed order)
+- Live Rust cancellation signer on Monad with direct and FastLane submission, separate Rust decision shadow, and Rust-backed three-venue feed collection
 
 ### AI / LLM Systems — AI-built under my direction [Directed]
 - mytradfiagent: live AI financial research agent (33+ tools, multi-model debate, A-share data)
@@ -154,6 +157,7 @@ This repo is a structured master CV datasource. To generate a tailored CV from a
 ### Trading / Quant / Market Making → read these files
 - `projects/funding-desk.md` — funding & spread arbitrage desk (core trading business)
 - `projects/perpl-mm.md` — Perpl market maker
+- `projects/perpl-onchain-execution.md` — Monad cancellations, FastLane research and Rust rollout
 - `projects/lighter-arb.md` — Lighter main ↔ rh arbitrage
 - `projects/research-library.md` — research behind the trading decisions
 - `projects/within-omni.md`, `projects/variational-perps.md` — RWA engines
@@ -162,7 +166,7 @@ This repo is a structured master CV datasource. To generate a tailored CV from a
 
 ### Data Engineering / Blockchain Data → read these files
 - `projects/sui-warehouse.md`, `projects/floki-bsc-warehouse.md` (hands-on)
-- `projects/perpl-indexer.md` (directed)
+- `projects/perpl-indexer.md`, `projects/perpl-onchain-execution.md` (directed)
 - `projects/defi-tools-2024-2025.md` (hands-on)
 - `skills.md` → Hands-On Technical Skills
 
@@ -176,6 +180,7 @@ This repo is a structured master CV datasource. To generate a tailored CV from a
 
 ### On-Chain Research → read these files
 - `projects/sui-warehouse.md`, `projects/floki-bsc-warehouse.md`, `projects/defi-tools-2024-2025.md`
+- `projects/perpl-indexer.md`, `projects/perpl-onchain-execution.md` (directed)
 - `experience.md` → FLOKI; open-source PRs
 
 ---
@@ -186,8 +191,9 @@ This repo is a structured master CV datasource. To generate a tailored CV from a
 |------|---------|-----|------|
 | [variational-platform.md](projects/variational-platform.md) | Variational Trading Platform — 2026 overview | 2026 directed | Multi-app trading platform |
 | [funding-desk.md](projects/funding-desk.md) | Funding & Spread Arbitrage Desk | 2026 mine + directed | Core trading business |
-| [research-library.md](projects/research-library.md) | Cross-Venue Research Library | 2026 mine + directed | ~15 trading studies |
+| [research-library.md](projects/research-library.md) | Cross-Venue Research Library | 2026 mine + directed | Trading and execution research |
 | [perpl-mm.md](projects/perpl-mm.md) | Perpl Market Maker | 2026 mine + directed | Live market making |
+| [perpl-onchain-execution.md](projects/perpl-onchain-execution.md) | Perpl On-Chain Execution and FastLane Research | 2026 mine + directed | Live cancellation and execution research |
 | [perpl-indexer.md](projects/perpl-indexer.md) | Perpl On-Chain Indexer & L3 Book | 2026 directed | Blockchain data engineering |
 | [lighter-arb.md](projects/lighter-arb.md) | Lighter main ↔ rh Arbitrage | 2026 mine + directed | Live cross-deployment arb |
 | [within-omni.md](projects/within-omni.md) | Within-Omni RWA Pair Trading | 2026 directed | Relative value, RWAs |
