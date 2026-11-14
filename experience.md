@@ -33,6 +33,7 @@
 - On-chain and off-chain user behaviour analysis
 - Real-time Tableau dashboards (DAU/MAU, engagement, campaign performance); Streamlit dashboards
 - DAU / MAU / campaign / engagement reporting
+- Built an Elfin weekly reporting dashboard in Flask and MySQL, with a JSON data endpoint and charts for daily check-ins, retention and active gamers.
 - Led the data strategy for the opBNB chain launch
 - Token / point incentive modelling with Python agent-based simulations
 - BattlePass launch support and ownership
@@ -75,17 +76,17 @@ Alongside the roles below until April 2026; full-time since May 2026. All venues
 
 - Funding & spread arbitrage desk across Omni/Variational, Lighter and trade.xyz — the core trading business
 - Set the strategy and operated a live Perpl market maker hedged on Lighter, owning quoting, hedge and inventory risk. Ranked 7th of 71 accounts above $1M volume on Perpl-leg spread capture in a commissioned study.
-- Directed Perpl's on-chain stale-quote cancellation path via direct Monad and FastLane submission, the live Rust signer, and shadow validation for a separate Rust decision process.
+- Directed Perpl’s on-chain stale-quote cancellation path via direct Monad and FastLane submission. Staged and operated a live Rust signer and a separate Rust trigger that took ownership of both BTC reference-feed decision paths.
 - Commissioned Perpl L3 queue reconstruction and a 42,096-fill study of adverse selection, transaction ordering and cancellation latency.
 - Directed the standalone Lighter main ↔ rh arbitrage service migration with book-driven decisions and isolated account-pair risk. Also directed Within-Omni RWA pair trading and the rwa-auto / omni-auto engines.
 - Treasury, rebalancer and liquidation-risk systems; Rust signing daemons and a read-only market-maker prototype
 - Options and vol tooling: crypto_options_agg, HAR-RV advisory, Hyperliquid tick backtesting, lighter_hedge
-- A ~15-study research library that drove the trading decisions
+- Commissioned research on funding, execution, institutional Treasury positioning, HIP-4 contracts and protocol economics. [Research projects](projects/market-data-research-tools.md)
 
 ## AI and Developer Tools (2026 projects, not a job)
 
 - AI-native way of working: I originate and direct, AI agents (Claude Code, Codex) implement
-- mytradfiagent (live AI research product), llm-wiki, ai keyboard, DCs-Transcriber, CodexBar HUD, a published Claude Code QA skill
+- mytradfiagent, llm-wiki, local autocomplete, DCs-Transcriber, coding-agent usage HUD and a published Claude Code QA skill. Directed a local Web3 JD aggregator and CV tailoring workflow.
 
 ---
 
@@ -121,9 +122,10 @@ Added in the 2026-10 audit (2026 systems; strategy and operation mine, implement
 - validated Monad L3 FIFO reconstruction on 1,399 price-level queues across 60 independent replay windows
 - Perpl's live on-chain cancel path cancelled 8,399 of 8,868 single-order submissions in a 2–4 November sample. The Rust signer went live on 5 November
 - measured a 68 ms paired median improvement from submission to observed proposed block in a bounded dual-ingress trial with 14 comparable cancels
-- measured 2.6 µs p50 / 6.4 µs p99 for the Rust cancellation decision alone across 300 synthetic events. Tested the separate BTC decision process against live feeds in shadow
+- measured 2.6 µs p50 / 6.4 µs p99 for the Rust cancellation decision alone across 300 synthetic events. Validated the separate trigger in shadow and verified live ownership of Binance and Lighter BTC cancellation decisions
 - Rust-backed three-venue recording used 3.94 CPU seconds versus 7.76 on the same replay input with identical rows. Rolled the recorder out live
 - validated the standalone Lighter arb port against 755,496 replayed decisions and 18 read API response bodies
+- institutional positioning pipeline parsed 2.54 million 13F holding rows across 42 managers. The JD aggregator’s documented October backfill reached 12,078 active jobs with 96.8% full-description coverage
 
 Use carefully depending on role / audience:
 
@@ -148,10 +150,9 @@ Use carefully depending on role / audience:
 
 ## Open-Source Contributions
 
-- duneanalytics/spellbook: #7649 Floki bot trades on Solana, #7650 Floki bot spell, #7658 Floki trades on EVM (Base + Ethereum + Solana dbt models), #8012 Meteora v2 Solana base-trades fix — Feb–Apr 2025, all closed without merge
-- DefiLlama/dimension-adapters: #6591 Elfa AI perp trading volume — Apr 2026, closed without merge
-- CodexBar fork: floating HUD with token statistics (Mar 2026)
-- Say "submitted PRs", not "contributed to" or "merged into"
+- Submitted Spellbook dbt PRs for Floki bot trade models on Solana, Base and Ethereum and a Meteora v2 base-trades fix. All four closed without merge. [#7649](https://github.com/duneanalytics/spellbook/pull/7649) · [#7650](https://github.com/duneanalytics/spellbook/pull/7650) · [#7658](https://github.com/duneanalytics/spellbook/pull/7658) · [#8012](https://github.com/duneanalytics/spellbook/pull/8012)
+- Submitted an April 2026 DefiLlama adapter PR for Elfa AI perpetuals volume on Hyperliquid. It closed without merge. [#6591](https://github.com/DefiLlama/dimension-adapters/pull/6591)
+- Directed the coding-agent usage HUD additions in an upstream-derived CodexBar project. [HUD repository](https://github.com/DavidbigC/dc_coding_agent_display)
 
 ---
 

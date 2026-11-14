@@ -13,8 +13,8 @@
 - Multi-turn autonomous research loop (up to 30-turn reasoning workflows)
 - Hypothesis debate mode with multiple model roles
 - Tool-calling system with 30+ financial data tools
-- Structured report output
-- User auth and conversation storage
+- Structured Markdown and PDF reports with data provenance
+- User auth, conversation storage and authenticated SSE reconnection to in-progress answers
 - Admin controls; public sharing; voice input support
 - Market data ingestion workflows
 - Frontend chat interface
@@ -29,6 +29,7 @@
 
 - Code: [github.com/DavidbigC/mytradfiagent](https://github.com/DavidbigC/mytradfiagent); 149 commits Feb 16–25 2026; FastAPI + React 19 / Vite, SSE
 - 33+ financial data tools called in parallel; three modes: Normal (deep research, up to 30 turns), Debate (MiniMax + Qwen debaters + judge, auto PDF report), Fast (Grok with web search, under 5 s)
+- Directed bounded parallel research with up to eight subagents and a blinded bull/bear judging stage. Added provider and financial-tool fallbacks.
 - Chinese A-share focus: EastMoney, Shanghai Stock Exchange, TradingView; 5-minute OHLCV for ~5,200 A-shares since 2020 with daily incremental updates; 10 years of quarterly financials incl. DuPont; fund research
 - pandas-ta sandbox (40+ indicators); Whisper STT voice input with fuzzy stock-name matching; public share links
 

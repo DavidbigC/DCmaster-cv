@@ -17,8 +17,8 @@
 ## Data and indexing
 
 - **Envio indexers** (2025): HyperIndex configs for BSC IDO contract events
-- **Dune Sim IDX — Aave V3 listener** (Jul 2025): Solidity listener on Borrow events with Foundry tests and a Cloudflare Workers + Drizzle API ([repo](https://github.com/DavidbigC/Dune-sim))
-- **Portfolio tracker** (Jan 2025): Flask + SQLAlchemy + Flask-Login multi-user position and P&L tracker, SQLite → PostgreSQL (Neon), deployed on Render
+- **Portfolio tracker** (Jan 2025): Flask + SQLAlchemy + Flask-Login multi-user position and P&L tracker, SQLite → PostgreSQL (Neon), deployed on Render. [Public project companion](https://github.com/DavidbigC/Port-Tracker)
+- **Research portfolio website** (Nov 2024): published Contango token analysis, Dolomite incentive calculations, Pendle PT research, and SOFA and CARV Dune work on an HTML/CSS portfolio site. [Public source](https://github.com/DavidbigC/Cryptosite-)
 
 ## Calculators and analysis
 

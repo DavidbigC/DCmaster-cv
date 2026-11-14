@@ -16,7 +16,7 @@
 
 **Dates:** 2026-04-14 → 18 · **Stack:** Swift, AppKit, AVAudioEngine, ElevenLabs Scribe v2 realtime, OpenAI-compatible LLM refinement
 
-- hold-a-key dictation from the menu bar: global hotkey, live waveform in a floating panel, realtime transcription, optional LLM clean-up, text injected into the focused app, clipboard fallback, history
+- hold-a-key dictation from the menu bar: global hotkey, live waveform in a floating panel, realtime transcription, optional LLM clean-up, text injected into the focused app with clipboard save and restore, and local SQLite transcription history
 
 ## ai keyboard — local AI autocomplete with personal fine-tuning
 
@@ -26,9 +26,11 @@
 
 ## Developer tooling
 
-- **CodexBar fork — floating HUD** with token statistics for Claude Code / Codex usage (Swift)
-- **rust-js-qa-skill** — a Claude Code skill for Rust + TypeScript/JavaScript QA
-- **mdviewer** — small Node markdown viewer
+- **Coding agent HUD** — directed the additions to an upstream-derived CodexBar: an always-on-top Swift/AppKit/SwiftUI HUD, Claude Code and Codex quota and local usage, expandable and docked modes, persisted position, and view-model and persistence tests. [Repository](https://github.com/DavidbigC/dc_coding_agent_display)
+- **Rust and JS QA skill** — packaged Claude Code workflows for Rust and JavaScript/TypeScript unit and regression testing, repair, and production-readiness reviews. [Repository](https://github.com/DavidbigC/rust-js-qa-skill)
+- **mdviewer** — local Node and browser Markdown reader with search, formatted rendering, a plain HTTP API and tests for file serving and safe path resolution. [Repository](https://github.com/DavidbigC/mdviewer)
+- **Portfolio site** — reconstructed and published a responsive GitHub Pages portfolio presenting research, data and engineering projects. [Repository](https://github.com/DavidbigC/Site)
+- **JD Aggregator** — local Web3 sourcing, matching, CV drafting and PDF export. [Project details](jd-aggregator.md)
 
 ## Tags
 

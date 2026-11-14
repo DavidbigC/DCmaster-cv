@@ -19,6 +19,7 @@
 - auto-deleverage design: reduce both legs of a hedged pair until distance is back above 10%
 - liquidation guard: % adverse move until liquidation as the operator unit, exposure netted only within an underlying, urgency from position ÷ daily volume; deployed observe-only by my choice
 - per-coin guards on the cross-deployment arb; capacity warning before a venue rejects an order on OI / skew caps
+- investigated an early-trim incident and corrected same-underlying perp and swap matching, side-specific margin calculations and reconciliation with venue liquidation prices. Added mutation tests for pause, clip, rate-cap and no-action rules.
 
 ## Tags
 

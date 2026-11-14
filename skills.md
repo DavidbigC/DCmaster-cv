@@ -22,7 +22,7 @@
 - Warehousing: PostgreSQL schemas, incremental loads, deduplication and upserts, async batch ingestion with retries
 - TypeScript / Node.js: Sui SDK (@mysten/sui), AlphaLend SDK, a Silo vault bot with multi-RPC failover, node-cron, PM2; Next.js + Reown frontend (Limito)
 - Go: Lighter order scripts, a TCP hedge server for the Lighter ↔ Bluefin arb, order-book monitors, Paradex WebSocket client
-- Solidity with Foundry: Uniswap hook for limit orders (Limito), Dune Sim IDX listener
+- Solidity with Foundry: Uniswap hook for limit orders (Limito)
 - Indexing: Envio HyperIndex indexers
 - Web apps: Flask + Flask-Login + Gunicorn on Render with Neon Postgres; Flask reporting dashboards
 - BI and reporting: Tableau, Streamlit, R / R Markdown with ggplot
@@ -294,6 +294,7 @@
 - RWA perp vs swap relative value
 - Event-driven cross-deployment arbitrage with book-age telemetry and position-basis recovery [Directed]
 - On-chain maker-fill attribution, same-block fill/cancel ordering, and latency decomposition from reference tick to proposed block [Directed]
+- Clamp-aware funding forecast validation on non-overlapping windows, matched quote-to-fill analysis, and fee- and depth-adjusted binary-contract comparisons [Directed]
 
 ## Visualization / Reporting
 
@@ -377,6 +378,9 @@ Typical work done:
 - shadow mode adapter pattern for live production migration (legacy → new data source with disagreement logging)
 - Rust transaction signer with isolated IPC, local nonce ownership, spend caps, receipt reconciliation and bounded multi-ingress trials [Directed]
 - Rust WebSocket ingestion with recorded-frame parity, reconnect recovery, and same-input CPU benchmarking [Directed]
+- Staged Python-to-Rust handoff of a live decision path with shadow comparison, status verification, and rollback controls [Directed]
+- SEC EDGAR 13F ingestion, amendment deduplication, comparable-filer ETF analytics and official Treasury yield-curve data [Directed]
+- Multi-source jobs ingestion, canonicalization, structured agent review, and Playwright PDF export [Directed]
 - real SQLite integration tests with tempfile isolation (not mocked) plus controllable fake clock
 - comprehensive fake object injection via dataclass Deps pattern for fast unit tests
 - Numba JIT-compiled backtest engines for fast parameter sweep simulation

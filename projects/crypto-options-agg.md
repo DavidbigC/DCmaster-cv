@@ -40,6 +40,8 @@
 - original Node/Express backend migrated to Rust with a parity-verification script
 - more venues: Binance options, Kyan, Lighter trading integration
 - Polymarket analysis service (implied move distribution by expiry); SVI vol-surface fitting; public vs private run modes
+- Added same-contract cross-exchange options arbitrage comparisons using after-fee leg prices.
+- Added a 63-day hourly history for implied versus realized covariance and skew-risk premium, using ATM implied volatility and 25-delta risk reversals and butterflies. The analytical framework is credited to Ravagli.
 
 ## Tags
 

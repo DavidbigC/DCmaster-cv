@@ -21,8 +21,8 @@
 | App | What it does | Stack | Runs |
 |---|---|---|---|
 | main ("variational") | funding/spread desk, rwa-maker / rwa-auto, omni-auto, Within-Omni, liquidation guard, Telegram alerts | Flask, Socket.IO, gevent, SQLite | AWS Lightsail |
-| perpl-mm | Perpl market maker, funding panels, on-chain cancel monitoring, PopDEX monitor | FastAPI, asyncio, SQLite, uPlot | dedicated AWS Lightsail |
-| risex-mm | RISEx ↔ Lighter basis collector, funding dashboard, maker execution | FastAPI, httpx, websockets | not deployed |
+| [perpl-mm](perpl-mm.md) | Perpl market maker, funding panels and on-chain cancellation, with an adjacent PopDEX monitor | FastAPI, asyncio, SQLite, uPlot | dedicated AWS Lightsail |
+| [risex-mm](risex-mm.md) | RISEx ↔ Lighter book and edge collector, funding dashboard, authenticated execution prototype | FastAPI, asyncio, SQLite, Rust | developed and tested |
 | treasury | cross-venue deposits / withdrawals and rebalancer | CLI + Textual TUI, web3 | local only |
 | [Lighter main ↔ rh arb](lighter-arb.md) | event-driven cross-deployment execution, portfolio controls and attribution | FastAPI, asyncio, Rust signer, SQLite | separate repo and service since November |
 
@@ -39,7 +39,7 @@ trade.xyz (HIP-3 RWA perps on Hyperliquid), Omni / Variational (RFQ crypto + com
 - **Aug:** Lighter main ↔ rh arb; dual-venue hedging; competitor study; CPU audits; RISEx
 - **Sep:** Within-Omni pair trading; liquidation guard; funding-regime research; XAU on the arb; backwardation page
 - **Oct:** arb returns ledger and multi-account sets; Perpl funding-hold workflow and on-chain stale-quote cancellation; PopDEX research and monitor
-- **Nov:** [Perpl execution research and live Rust cancellation signer](perpl-onchain-execution.md), Rust decision shadow, Rust market-data ingestion, and the Lighter arb service split
+- **Nov:** [Perpl execution research, live Rust signing and BTC cancel decisions](perpl-onchain-execution.md), Rust market-data ingestion, updated Omni credentials and spread instrumentation, and the Lighter arb service split
 
 ## Operating rules I set for the agents [Mine]
 
@@ -56,7 +56,7 @@ trade.xyz (HIP-3 RWA perps on Hyperliquid), Omni / Variational (RFQ crypto + com
 - **rwa-trading modes:** maker-on-trade.xyz, taker-both, maker-on-Lighter executors
 - **Ondo arb page:** Omni ↔ Ondo Perps scanner with hourly funding and symbol aliasing
 - **RISEx:** checksummed book collector, BTC basis model, funding dashboard, maker permit signing and an authenticated maker execution daemon
-- **PopDEX:** protocol trust-model due diligence; read-only maker / Lighter-hedge spread monitor that paper-hedges every public fill
+- **PopDEX:** protocol trust-model due diligence and a read-only, multi-market PopDEX / Lighter monitor with funding carry, spread and paper hedge attribution on real public fills
 - **Backwardation page:** oil forward curve and the cost of the next roll
 - **Monitoring sidecars:** Binance / Lighter / Perpl touch collector, reorg monitor, competitor reports, memory probe
 

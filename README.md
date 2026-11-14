@@ -7,9 +7,7 @@
 **Flipside:** [flipsidecrypto.xyz/DavidC/dashboards](https://flipsidecrypto.xyz/DavidC/dashboards)
 **AI product repo:** [github.com/DavidbigC/mytradfiagent](https://github.com/DavidbigC/mytradfiagent)
 
-*Last full audit: 2026-10-21 — every GitHub repo, authored PRs, local projects and the private trading workspace.*
-
-*Perpl, Monad execution and Lighter arb update: 2026-11-12.*
+*Repository and local-project audit: 2026-11-14. See the [source inventory](repository-coverage.md).*
 
 ---
 
@@ -111,10 +109,10 @@ This repo is a structured master CV datasource. To generate a tailored CV from a
 - [Mine] 2021–2025: hands-on on-chain data work — PostgreSQL warehouses for Sui and BNB Chain, Dune / Flipside / Allium research and dashboards, DeFi automation and calculators, a CLAMM limit-order product, cross-venue arb bots
 - [Mine] Product and growth analytics in three crypto companies: FLOKI, Dragon Race (#1 dApp on Manta, 1M+ wallets in an opBNB launch week), CARV
 - [Mine + Directed] Since Jan 2026, conceived, directed and operated a multi-app cross-venue trading platform as a one-person team with AI coding agents. At the October audit it had 1,435 commits and four apps, with live capital on five venues (trade.xyz, Omni/Variational, Lighter main, Lighter rh, Perpl)
-- [Mine] Run a delta-neutral funding and spread arbitrage desk across Omni, Lighter and trade.xyz; attribution showed ~78% of profit came from funding, which reshaped how I choose and cut pairs
+- [Mine] Run a delta-neutral funding and spread arbitrage desk across Omni, Lighter and trade.xyz; attribution assigned ~78% of explained P&L to funding, which reshaped how I choose and cut pairs
 - [Mine] Set the strategy for and ran a market maker on Perpl (Monad) hedged on Lighter that ranked 7th of 71 accounts above $1M volume on spread capture (+3.50 bps), per an on-chain study I commissioned
-- [Mine + Directed] Directed and operated Perpl's on-chain stale-quote cancellation workflow with a live Rust signer. Commissioned a 42,096-fill Monad study of execution timing and FastLane transaction ordering
-- [Mine + Directed] Commissioned a ~15-study research library (RWA arbitrage universe, funding mechanisms, oracle risk, 135-symbol funding-harvest screen, oil rolls and backwardation, funding prediction) and traded from it
+- [Mine + Directed] Directed and operated Perpl’s on-chain stale-quote cancellation workflow with a live Rust signer and BTC decision trigger. Commissioned a 42,096-fill Monad study of execution timing and FastLane transaction ordering
+- [Mine + Directed] Commissioned and used research on RWA spreads, funding and roll mechanics, Perpl market microstructure, institutional positioning and prediction-market pricing
 - [Mine] Run AI agents like an engineering team: brief → spec → plan → build with tests → review → operate; standing operating rules for the agents (ship features inert, never touch live parameters, live data is authoritative)
 
 ---
@@ -144,11 +142,13 @@ This repo is a structured master CV datasource. To generate a tailored CV from a
 - Standalone Lighter main ↔ rh arbitrage service with book-driven decisions and per-coin liquidation guards
 - Within-Omni RWA future-vs-swap pair trading; treasury and rebalancer; liquidation-risk stack
 - Perpl chain indexer (316.9M actions), real-time L3 order book, Parquet + DuckDB research lake
-- Live Rust cancellation signer on Monad with direct and FastLane submission, separate Rust decision shadow, and Rust-backed three-venue feed collection
+- Live Rust cancellation signer on Monad with direct and FastLane submission, a separately deployed BTC Rust decision trigger, and Rust-backed three-venue feed collection
+- RISEx–Lighter data and execution prototype, Treasury market and 13F positioning dashboards, and HIP-4 and protocol research tooling
 
 ### AI / LLM Systems — AI-built under my direction [Directed]
 - mytradfiagent: live AI financial research agent (33+ tools, multi-model debate, A-share data)
 - llm-wiki (LLM-maintained knowledge base), ai keyboard (local autocomplete with LoRA fine-tuning), DCs-Transcriber (macOS voice input)
+- JD Aggregator for Web3 job sourcing, matching and CV drafting with PDF export
 
 ---
 
@@ -158,6 +158,7 @@ This repo is a structured master CV datasource. To generate a tailored CV from a
 - `projects/funding-desk.md` — funding & spread arbitrage desk (core trading business)
 - `projects/perpl-mm.md` — Perpl market maker
 - `projects/perpl-onchain-execution.md` — Monad cancellations, FastLane research and Rust rollout
+- `projects/perpl-research.md`, `projects/market-data-research-tools.md` — funding, execution, Treasury and prediction-market research
 - `projects/lighter-arb.md` — Lighter main ↔ rh arbitrage
 - `projects/research-library.md` — research behind the trading decisions
 - `projects/within-omni.md`, `projects/variational-perps.md` — RWA engines
@@ -166,7 +167,7 @@ This repo is a structured master CV datasource. To generate a tailored CV from a
 
 ### Data Engineering / Blockchain Data → read these files
 - `projects/sui-warehouse.md`, `projects/floki-bsc-warehouse.md` (hands-on)
-- `projects/perpl-indexer.md`, `projects/perpl-onchain-execution.md` (directed)
+- `projects/perpl-indexer.md`, `projects/perpl-onchain-execution.md`, `projects/market-data-research-tools.md` (directed)
 - `projects/defi-tools-2024-2025.md` (hands-on)
 - `skills.md` → Hands-On Technical Skills
 
@@ -195,6 +196,9 @@ This repo is a structured master CV datasource. To generate a tailored CV from a
 | [perpl-mm.md](projects/perpl-mm.md) | Perpl Market Maker | 2026 mine + directed | Live market making |
 | [perpl-onchain-execution.md](projects/perpl-onchain-execution.md) | Perpl On-Chain Execution and FastLane Research | 2026 mine + directed | Live cancellation and execution research |
 | [perpl-indexer.md](projects/perpl-indexer.md) | Perpl On-Chain Indexer & L3 Book | 2026 directed | Blockchain data engineering |
+| [perpl-research.md](projects/perpl-research.md) | Perpl Funding and Microstructure Research | 2026 mine + directed | Market and strategy research |
+| [market-data-research-tools.md](projects/market-data-research-tools.md) | Treasury, Prediction-Market and Protocol Research Tools | 2026 mine + directed | Market-data and analytics |
+| [risex-mm.md](projects/risex-mm.md) | RISEx–Lighter Monitor and Execution Prototype | 2026 directed | Venue integration |
 | [lighter-arb.md](projects/lighter-arb.md) | Lighter main ↔ rh Arbitrage | 2026 mine + directed | Live cross-deployment arb |
 | [within-omni.md](projects/within-omni.md) | Within-Omni RWA Pair Trading | 2026 directed | Relative value, RWAs |
 | [treasury-and-risk.md](projects/treasury-and-risk.md) | Treasury, Rebalancer & Liquidation-Risk Stack | 2026 directed | Capital and risk |
@@ -206,6 +210,7 @@ This repo is a structured master CV datasource. To generate a tailored CV from a
 | [crypto-options-agg.md](projects/crypto-options-agg.md) | crypto_options_agg | 2026 directed | Options analytics |
 | [mytradfiagent.md](projects/mytradfiagent.md) | mytradfiagent | 2026 directed | Live AI research agent |
 | [polymarket.md](projects/polymarket.md) | Polymarket 5-Min Monitor | 2026 directed | Prediction-market research |
+| [jd-aggregator.md](projects/jd-aggregator.md) | JD Aggregator and CV Tailoring | 2026 mine + directed | Search, ranking and document workflow |
 | [ai-tools.md](projects/ai-tools.md) | llm-wiki, ai keyboard, DCs-Transcriber, dev tooling | 2026 directed | Personal AI tools |
 | [floki-dashboards.md](projects/floki-dashboards.md) | FLOKI product dashboards | 2025 hands-on | Company BI |
 | [sui-warehouse.md](projects/sui-warehouse.md) | SUI Transaction Data Warehouse | 2025 hands-on | Blockchain ETL |

@@ -18,6 +18,14 @@
 - validated the event decoding against engine acknowledgements, matching 1.23M of 1.24M acknowledgements to chain actions by request ID
 - powered the market-maker competitor study, fee and funding forensics, and a later [execution study](perpl-onchain-execution.md) that matched 42,096 BTC maker fills to Monad events
 
+
+## Feed operation and analysis [Directed]
+
+- Built historical and live ingestion paths with HyperSync, RPC logs, and block-consistent Multicall3 seeds. Added resumable range fetching, chain-versus-venue diagnostics, captured fixtures, replay, reorg monitoring, and validation against venue acknowledgement records.
+- Compared redundant public RPC streams and the venue feed. Added automatic source failover, reconnect gap replay, and repair from a fresh snapshot after persistent book disagreement. Tracked crossed or locked books, ghost levels and order membership separately from arrival lead.
+- Exposed order-level queue composition, a fills tape, a maker census and queue-ahead-at-touch telemetry. Pushed the L3 ladder to the maker console and used the recorded queue state to study when retaining position at the touch was valuable.
+- Kept the bulk backfill and research lake on the local research machine. The trading console consumed a lightweight feed mirror.
+
 ## Tags
 
 blockchain ETL · columnar analytics · L3 order books · Monad · DuckDB / Parquet

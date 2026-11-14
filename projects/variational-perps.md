@@ -28,6 +28,11 @@
 - Thread-safe fill queue with deduplication across WS retries (fill key = oid:tid:sz:time_ms tuple)
 - Periodic reconciliation (30s) against live open_orders to catch orphaned orders after cancel/fill races
 
+## Verified taker workflows [Directed]
+
+- Added a paired taker mode that requires confirming observations within a rolling window and checks executable order-book depth. Sends both IOC legs together, repairs bounded residual exposure, and quarantines a persistent mismatch.
+- Applies per-venue quantity and price precision, entry risk ceilings and post-trade reconciliation.
+
 ## Risk Management
 
 - Multi-level risk supervision: global notional USD cap, per-symbol max inventory cap, bilateral net-inventory check

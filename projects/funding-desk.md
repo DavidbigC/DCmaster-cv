@@ -23,6 +23,8 @@
 - /historical-data: settled-funding stats via boundary sampling, index-vs-mark premium chart, market-hours filter
 - funding ledger: every funding payment backfilled (1,803 Omni + 12,795 Lighter rows), daily sync, daily funding chart; cashflow ledger so deposits never read as profit
 - unified three-venue portfolio with net delta per symbol
+- added multi-account Omni session renewal and updates to running sessions, with bounded HTTP pooling and retirement of stale connections. Used no-network-I/O diagnostics to isolate orphaned native sessions and growth during credential rotation.
+- directed the Omni RFQ ↔ Lighter taker-taker engine with tiered entry and exit inventory, baseline, verification and armed quote cadences, rolling threshold updates, parallel two-leg submission, WebSocket fill confirmation and restart reconciliation.
 
 ## Research behind it
 

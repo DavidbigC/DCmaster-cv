@@ -17,11 +17,12 @@
 
 ## November execution and service work [Directed]
 
+- Added an optional Binance displacement gate with market-data readings recorded on fills, plus order-book nonce gap detection.
 - Added book-update-driven decisions, with slower account and risk reads and a polling fallback. Used sorted books, a warm position baseline and fill-level book-age telemetry. After the initial rollout was rolled back for CPU cost, a nine-market replay measured 5.4% of one core in the revised book-driven mode versus 12.3% before the changes.
 - Added an optional persistent WebSocket path for signed Lighter submissions. A warm request benchmark measured ~4 ms over WebSocket versus ~11 ms over REST. The released path defaults to REST.
 - Sent paired immediate-or-cancel orders with order-ID-based fill confirmation, residual-leg repair or unwind, and explicit handling of ambiguous outcomes. Reconstructed position basis from the fill ledger on restart and checked it against venue positions.
 - Split the arb out of the Perpl app into a standalone Git repo and FastAPI service with its own database and deployment. Verified parity on 755,496 replayed decisions and 18 read API response bodies. Staged the migration of historical fills, snapshots, funding and capital records.
-- Added a per-market moving-centre percentile band with side-by-side history. The alternate mode shipped off by default.
+- Added a per-market moving-centre percentile band with side-by-side minute histories. The alternate mode shipped off by default.
 
 ## Tags
 
